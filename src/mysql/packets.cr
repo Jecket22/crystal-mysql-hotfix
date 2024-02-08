@@ -66,7 +66,7 @@ module MySql::Protocol
     def write(packet : MySql::WritePacket)
       caps = CLIENT_PROTOCOL_41 | CLIENT_SECURE_CONNECTION | CLIENT_PLUGIN_AUTH_LENENC_CLIENT_DATA
 
-      caps |= CLIENT_PLUGIN_AUTH if @password
+      #caps |= CLIENT_PLUGIN_AUTH if @password
 
       caps |= CLIENT_CONNECT_WITH_DB if @initial_catalog
 
